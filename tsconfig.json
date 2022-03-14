@@ -98,7 +98,11 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types",
+    ]
   },
   "assets":["./src/views/*"],
   "include": ["./src", "decs.d.ts"], // "src/decs.d.ts", "build"

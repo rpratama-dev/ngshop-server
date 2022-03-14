@@ -10,7 +10,7 @@ yarn-error.log*
 dist
 build
 content/*
-src/private
+# src/private
 
 # Runtime data
 pids
