@@ -27,8 +27,8 @@ const schema = new mongoose.Schema(
     country: { type: String, required: true },
     phone: { type: String, required: true },
     status: { type: String, required: true },
-    totalPrice: { type: Number, required: true, default: 0 },
-    user: { type: mongoose.Types.ObjectId, ref: 'User', required: true },
+    totalPrice: { type: Number, required: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   },
   { timestamps: true },
 );

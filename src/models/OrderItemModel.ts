@@ -10,7 +10,7 @@ export interface OrderItemDocument extends mongoose.Document {
 
 export const orderItemSchema: { [path: string]: mongoose.SchemaDefinitionProperty<undefined> } = {
   product: productSchema,
-  quantity: { type: Number, required: true, default: 0 },
+  quantity: { type: Number, required: true },
 };
 
 const schema = new mongoose.Schema(orderItemSchema, { timestamps: true });

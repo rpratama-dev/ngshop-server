@@ -20,15 +20,16 @@ export interface ProductDocument extends mongoose.Document {
 export const productSchema: { [path: string]: mongoose.SchemaDefinitionProperty<undefined> } = {
   name: { type: String, required: true },
   description: { type: String, required: true },
-  richDescription: { type: String, required: true },
-  image: { type: String, required: true },
-  images: { type: Array, required: true },
-  brand: { type: String, required: true },
-  price: { type: Number, required: true, default: 0 },
-  category: { type: mongoose.Types.ObjectId, ref: 'Category', required: true },
-  countInStock: { type: Number, required: true, default: 0 },
-  rating: { type: Number, required: true, default: 0 },
-  isFeatured: { type: Boolean, required: true, default: false },
+  richDescription: { type: String, default: '' },
+  image: { type: String, default: '' },
+  images: { type: [{ type: String }] },
+  brand: { type: String, default: '' },
+  price: { type: Number, default: 0 },
+  category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },
+  countInStock: { type: Number, required: true },
+  rating: { type: Number, default: 0 },
+  numReviews: { type: Number, default: 0 },
+  isFeatured: { type: Boolean, default: false },
 };
 
 const schema = new mongoose.Schema(productSchema, { timestamps: true });
