@@ -2,11 +2,16 @@
   "name": "ngshop-server",
   "version": "1",
   "description": "an api for ngshop",
-  "main": "app.js",
+  "main": "src/bin/www",
   "repository": "https://github.com/rpratama-dev/ngshop-server.git",
   "author": "rpratama-dev",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "build": "tsc",
+    "dev": "PORT=5001 nodemon ./src/bin/www.ts"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",

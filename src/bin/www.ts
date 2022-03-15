@@ -2,7 +2,7 @@
 import app from '../app';
 import http from 'http';
 import Logger from '../utils/logger';
-// import DB from '../utils/DBC';
+import { dbConnect } from '../utils/connect';
 
 /**
  * Get port from environment and store in Express.
@@ -24,7 +24,7 @@ const server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-// DB.startConnection();
+dbConnect();
 
 /**
  * Normalize a port into a number, string, or false.
