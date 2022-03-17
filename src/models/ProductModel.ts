@@ -12,6 +12,7 @@ export interface ProductDocument extends mongoose.Document {
   category: CategoryDocument | null;
   countInStock: number;
   rating: number;
+  numReviews: number;
   isFeatured: boolean;
   createdAt: Date;
   updatedAt: Date;

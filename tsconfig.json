@@ -102,6 +102,6 @@
   },
   "assets":["./src/views/*"],
   "include": ["./src"], // "src/decs.d.ts", "build"
-  "exclude": ["./dist"] // , "./src/b0c7f568b9e9c3cf70",
+  "exclude": ["./dist", "./public"] // , "./src/b0c7f568b9e9c3cf70",
   // "files": []
 }
